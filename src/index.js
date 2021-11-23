@@ -7,7 +7,9 @@ app.use(bodyParser.json());
 
 
 
-
+app.get('/', (req,res)=>{
+    res.send('😎 funcionando')
+});
 app.post('/gerarpix', (req, res)  => {
   try {
     const {key, city, client, amount, description} = req.body;
