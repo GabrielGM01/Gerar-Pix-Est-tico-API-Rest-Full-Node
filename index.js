@@ -31,12 +31,11 @@ app.listen(process.env.PORT || 5000);
 
 
 function gerarPixEstatico(name,city,key,amount,description){ 
-    let amountFormat = amount.toString().replace(/[.]/g, '');
     let pix = PIX.static()
     .setReceiverName(name)
     .setReceiverCity(city)
     .setKey(key)
-    .setAmount(parseFloat(amountFormat.replace(',','.')))
+    .setAmount(amount)
     .setDescription(description);
   return pix.getBRCode();
 }
