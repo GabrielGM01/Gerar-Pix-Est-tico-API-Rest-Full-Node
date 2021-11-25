@@ -20,7 +20,7 @@ app.post('/gerarpix', (req, res)  => {
         code:code
     });
   } catch(error){
-      res.json({
+      res.Status(400).json({
           "Status":"Error"
       }
   );
