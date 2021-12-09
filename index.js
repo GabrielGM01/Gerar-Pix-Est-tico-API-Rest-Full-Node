@@ -35,7 +35,7 @@ function gerarPixEstatico(name,city,key,amount,description){
     .setReceiverName(name)
     .setReceiverCity(city)
     .setKey(key)
-    .setAmount(parseInt(amount))
+    .setAmount(parseFloat(amount))
     .setDescription(description);
   return pix.getBRCode();
 }
